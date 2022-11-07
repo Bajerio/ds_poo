@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  
+  <script type="module" crossorigin src="/ds_poo/index.47c8969e.js"></script>
+  <link rel="stylesheet" href="/ds_poo/index.246ec8f9.css">
+</head>
+
+<body>
+
+  <h1 id="titulo">PÁGINA DE POO CON DARK SOULS</h1>
+
+  <!--<div class="container">Padre "container" sin flex cyan -->
+    <div class="panel_personaje"><!--Hijo de "container" con flex verde -->
+      
+      <div class="retrato_crear_perso">
+
+            <div class="retrato">
+            <img src="/ds_poo/retrato.cd0b4ae5.PNG" alt="cara" id="cara"/>
+            </div>
+            <div class="franjas">
+              <div class="franja_morada">Crear personaje</div>
+              <div class="franja_roja">Elegir fisico</div>
+            </div>
+      </div>
+    
+
+      <div class="cuadro"><!--Hijo de "panel_personaje" con flex-->
+        <img src="/ds_poo/hechicero.04f6c949.jpg" alt="hechicero" id="hechicero"/>
+      </div>
+
+      <div class="conf_perso"><!--Hijo de "panel_personaje" con flex-->
+
+        <!-- onfocus="this.value=''" cuando pincho en el campo se limpia lo escrito -->
+        <input id="nombre" onclick="this.value=''" type="text" name="nombre" placeholder="Introduzca nombre" minlength="3" maxlength="30" required />
+        <!-- <textarea maxlength="30" id="textarea" cols="5" rows="5"></textarea> -->
+        <div></div>
+<!--       
+        <label id="cara">Cara</label>
+        <select id="cara_perso">
+          <option>Mujer</option>
+          <option>Hombre</option>
+        </select> -->
+
+        <label id="cara">Cara</label>
+        <input type="button" name="cara" id="cara_perso" value="Seleccionar">
+
+          <!--        
+            <select id="M_H">
+              <option>Mujer</option>
+              <option>Hombre</option>
+            </select> -->
+
+          <!-- Sexo -->
+          <label id="sexo">Sexo</label>
+          <input type="button" name="sexo" id="sexo_perso" value="Seleccionar">
+        
+        <!-- <label id="pelo">Pelo</label>
+        <select id="pelo_perso">
+          <option>Mujer</option>
+          <option>Hombre</option>
+        </select> -->
+
+        <label id="pelo">Pelo</label>
+        <input type="button" name="pelo" id="pelo_perso" value="Seleccionar">
+
+
+        <!-- <label id="clase">Clase</label>
+        <select id="clase_combate">
+          <option>Guerrero</option>
+          <option>Caballero</option>
+          <option>Vagabundo</option>
+          <option>Ladrón</option>
+          <option>Bandido</option>
+          <option>Cazador</option>
+          <option>Mago</option>
+          <option>Piromante</option>
+          <option>Clérigo</option>
+          <option>Marginado</option>
+        </select> -->
+
+        <label id="clase">Clase</label>
+          <input type="button" name="clase" id="clase_perso" value="Seleccionar">
+       
+        <!-- <label id="pelo_ojos">Pelo/Ojos</label>
+        <select id="pelo_ojos_perso">
+          <option>Mujer</option>
+          <option>Hombre</option>
+        </select> -->
+
+        <label id="pelo_ojos">Pelo/Ojos</label>
+        <input type="button" name="pelo_ojos" id="pelo_ojos_perso" value="Seleccionar">
+
+
+        <!-- <label id="regalo">Regalo</label>
+        <select id="regalo_perso">
+          <option>Ninguno</option>
+          <option>Bendición divina</option>
+          <option>Bomba fuego negra</option>
+          <option>Humanidades Gemelas</option>
+          <option>Prismáticos</option>
+          <option>Colgante</option>
+          <option>Llave maestra</option>
+          <option>Anillo de diminuto</option>
+          <option>Anillo de bruja</option>
+        </select> -->
+
+        <label id="regalo">Regalo</label>
+          <input type="button" name="regalo" id="regalo_perso" value="Seleccionar">
+
+        <div></div>
+        <div></div>
+<!-- 
+        <label id="fisico">Físico</label>
+        <select id="fisico_perso">
+          <option>Normal</option>
+          <option>Delgado</option>
+          <option>Grande</option>
+        </select> -->
+
+        <label id="fisico">Fisico</label>
+        <input type="button" name="fisico" id="fisico_perso" value="Seleccionar">
+
+
+
+        <!-- Botones de seleccion -->
+
+        
+
+
+        <!-- Botones confirmativos -->
+
+        <!-- <a href="./components/resumen_personaje.html"><input type="button" class="btn_aceptar" id="aceptar" value="Aceptar"></a> -->
+        <input type="button" name="aceptar" id="aceptar" value="Aceptar">
+        <input type="button" name="personalizar" id="personalizar" value="Personalizar">
+
+
+       
+
+
+      </div>    
+  </div>
+  </div>
+</body>
+
+</html>
