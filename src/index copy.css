@@ -1,0 +1,298 @@
+html{padding:0;margin:0}
+body{
+    background:#223;
+    color:white;
+    
+}
+
+h1#titulo{
+    
+    text-align:center;
+
+}
+
+
+
+input:hover {background-color: #cbc752}
+input#aceptar:hover {background-color: #3e8e41}
+input#personalizar:hover {background-color: #3e8e41}
+
+
+/* div.container{ */
+
+    .modal{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:0.4rem;
+        width: 450px;
+        padding: 1.3rem;
+        min-height: 250px;
+        position: absolute;
+        top:20%;
+        background-color: white;
+        border:1px solid #ddd;
+        border-radius: 15px;
+    
+        /* ESTO LO AÑADIMOS PARA EL OVERLAY POSTERIOR PARA REALIZAR UN EFECTO EN EL QUE
+        EL MODAL ESTA POR ENCIMA DE LA PRINCIPAL */
+        z-index: 2;
+    
+    }
+
+    .hidden{
+        display: none;
+    }
+
+
+/*La relacion de flex es heredada de padre a hijo, pero si ese hijo tiene otro este no comparte la propiedad*/
+  
+  
+    
+    div.panel_personaje{
+        /* 
+        
+        justify-content:center;
+        /* flex-wrap: wrap; */
+        
+        /* display:flex; */
+        display:flex;
+        flex-direction:row;
+
+        /* contenedor multilinea */
+        
+        /*
+        Metodos que funcionan activando flex-wrap
+            el wrap no es obligatorio, pero si yo en el ancho de la pagina tengo 10 cuadrados
+            con anchura y altura 100 estos varian su tamaño para caber en el ancho de la pagina
+            pero si activo el wrap se mantiene el tamaño y los que no quepan bajan a la siguiente
+            linea
+        */
+        /* flex-wrap: wrap;  */
+
+        /* cuando los ítems no caben en el ancho disponible, el eje principal se divide en múltiples líneas.       */
+            /* align-content: center; */
+            /* Es como si redujese el elemento a tamaño de cuadrado, actua cuando hay un flex-wrap*/
+            /* align-items:center; */
+        /* Se moverian segun el eje Y o llamado en flex como eje secundario*/
+        justify-content:center;
+        align-items:center;
+         flex-wrap: wrap;
+        
+        /* align-content: center; */
+        
+        /* margin-left:400px; */
+        border:4px yellow;
+        border-style:inset;
+        border-radius:10px 10px;
+        background: rgb(26, 53, 30);/*Verde*/
+
+        & div.retrato_crear_perso{
+
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            border:5px solid black;
+
+                  
+                    & div.retrato{
+                        padding:20px 40px 20px 40px;
+                        background:black;
+
+                        & img#cara{
+                            width:90px;
+                            height:100px;
+                        }
+
+                    }
+
+                    & div.franjas{
+
+                        & div.franja_morada{
+
+                            width:1500px;
+                            height:70px;    
+                            background:purple;
+                            font-size:30px;
+                            font-weight: 50;
+                            font-style:oblique
+                            
+                        }
+                            
+                        & div.franja_roja{
+                                width:1500px;
+                                height:70px; 
+                                background:red;
+                                font-size:30px;
+                                font-weight: 50;
+                                font-style:oblique
+                            
+                        }
+                    }
+                    
+                  
+
+
+                }
+        
+        
+        & div.cuadro{
+            
+                    /*
+                    No se usa flex ya que lo hereda de panel_personaje
+                     display:flex;
+                    flex-direction:column; */
+                    margin:70px;
+                    background:red;
+                    border:5px solid #760dcf;
+                       
+                        & img#hechicero{
+                            margin:60px;
+                            border:5px solid #0d5bcf;
+
+                        }
+                    }
+        
+        & div.conf_perso{
+            
+            /*
+            No se usa flex ya que lo hereda de panel_personaje
+            pero usamos grid para el formulario
+            display:flex;
+            align-content: center;
+            */
+
+            display:grid;
+           
+            grid-template-rows:repeat(5,50px);
+            grid-template-columns:repeat(4,150px);
+            /* min-height:400px; */
+            background:#26292c;
+            border:4px double red;
+            border-radius:8px;
+
+                            & input#nombre{
+                        
+                                /* display:flex;    */
+                                
+                                width:293px;
+                                height:45px;
+                                color:green;
+                                background:#234;
+                                font-size:16px;
+                                text-align:center;
+                                font-style:oblique
+                            }
+         
+                            & label#cara{
+                                                                    
+                                background:black;
+                                color:white;
+                                font-size:30px;
+                                text-align:center;
+                                font-family :"Montserrat sans-serif";
+                                        
+                            }
+                            & label#sexo{
+
+                                background:black;
+                                color:white;
+                                font-size:30px;
+                                text-align:center;
+                                font-family :"Montserrat sans-serif";
+
+                            }  
+
+                            & label#clase{
+
+                                background:black;
+                                color:white;
+                                font-size:30px;
+                                text-align:center;
+                                font-family :"Montserrat sans-serif";
+                            } 
+
+                            
+                            & label#pelo_ojos{
+                                
+                                            
+                                background:black;
+                                color:white;
+                                font-size:30px;
+                                text-align:center;
+                                font-family :"Montserrat sans-serif";
+                              
+                            
+                            }
+
+                            
+                            & label#regalo{
+
+                                background:black;
+                                color:white;
+                                font-size:30px;
+                                text-align:center;
+                                font-family :"Montserrat sans-serif";
+                            }  
+
+                            & label#pelo{
+                            
+                                        
+                                background:black;
+                                color:white;
+                                font-size:30px;
+                                text-align:center;
+                                font-family :"Montserrat sans-serif";
+                                
+                                
+                            }
+
+                            
+                            & label#fisico{
+
+                                background:black;
+                                color:white;
+                                font-size:30px;
+                                text-align:center;
+                                font-family :"Montserrat sans-serif";
+                            }
+
+                            & input#aceptar{
+
+                                
+                                padding: 13px 42px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                cursor:pointer;
+
+                            }
+                            & input#personalizar{
+
+                                
+                                padding: 15px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                cursor:pointer;
+                                
+                            }
+
+                            & input#sexo_perso{cursor:pointer;}
+                            & input#clase_perso{cursor:pointer;}
+                            & input#regalo_perso{cursor:pointer;}
+                            & input#fisico_perso{cursor:pointer;}
+                            & input#cara_perso{cursor:pointer;}
+                            & input#pelo_perso{cursor:pointer;}
+                            & input#pelo_ojos_perso{cursor:pointer;}
+        }
+}
+
+
+/* resumen_personaje.html */
+
+body#body_resumen{background:#223}
+
+       

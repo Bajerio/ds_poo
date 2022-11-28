@@ -1,0 +1,29 @@
++ Ordenar el panel: 
+    - Situando un cuadrado de estadistica debajo del retrato, con el nombre
+    de cada estadistica iniciado a 0.
+    - Esta estadistica variará segun vayamos configurando al personaje (Sexo, Clase, Regalo).
+
++ Terminar todas las funciones de eleccion del panel personaje:
+    - Al poner el raton sobre un input del modal, deberia salir una descripcion de la
+      opcion a elegir. O mejor, que la descripcion apareciera en un textarea debajo de
+      las opciones.
+
+- Mejorar la interfaz de botones y de los modales.
+
++ Boton Aceptar -> Selección opciones modal:
+    - El campo Nombre es obligatorio, si le doy al boton Aceptar, deberia decirme que el
+    campo Nombre no puede estar vacío.
+    - Si no he configurado todos o ningun input de seleccion del panel, al darle a Aceptar,
+los valores no seleccionados tendrian que poner un valor aleatorio.
+
++ Boton Personalizar:
+
+    - Debe salir un modal en el que podamos añadir un numero maximo de puntos a estadisticas,
+      la idea es: arriba del modal debe aparecer un cuadrado con el numero 3 con el que se 
+      pueda añadir esos 3 puntos adicionales a las estadisticas.
+    - Se le podria añadir interfaces de desplazamiento sobre estadistica o aspecto de personaje.
+
++ Input Clase:
+
+    - Segun vayamos dando a los inputs de la Clase, la imagen del personaje cambia respecto a la 
+      Clase seleccionada que configuremos.
