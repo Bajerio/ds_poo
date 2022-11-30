@@ -14,13 +14,20 @@
 <body>
 
   <section class="sexo_modal hidden">
-
+    <style type="text/css"> 
+      textarea{
+        font-size:30px;
+        resize: none;
+      } 
+      
+    </style>
     <!-- AÑADIR EL MARKUP (Panel del modal) Y EL BOTON X-->
     <div class="flex">
-      <input type="button" class="salir_sexo" value="X" />
+      <input type="button" class="salir_sexo" name="salir" value="X" />
     </div>
     <input type="button" id="hombre" value="Hombre" />
     <input type="button" id="mujer" value="Mujer" />
+    <textarea name="descripcion" id="des_sexo" cols="25" rows="5" placeholder="Descripción de elementos" readonly></textarea>
 
   </section>
 
@@ -28,7 +35,7 @@
 
     <!-- AÑADIR EL MARKUP (Panel del modal) Y EL BOTON X-->
     <div class="flex">
-      <input type="button" class="salir_clase" value="X" />
+      <input type="button" class="salir_clase" name="salir"  value="X" />
     </div>
     <input type="button" id="gue" value="Guerrero" />
     <input type="button" id="cab" value="Caballero" />
@@ -42,9 +49,27 @@
     <input type="button" id="mar" value="Marginado" />
 
   </section>
+  
+
+  <section class="regalo_modal hidden">
+
+    <!-- AÑADIR EL MARKUP (Panel del modal) Y EL BOTON X-->
+    <div class="flex">
+      <input type="button" class="salir_regalo" name="salir" value="X" />
+    </div>
+    <input type="button" id="bomba" value="Bomba I. N."/>
+    <input type="button" id="prisma" value="Prismáticos" />
+    <input type="button" id="bendi" value="Bendición Divina" />
+    <input type="button" id="llave" value="Llave Universal"/>
+    <input type="button" id="ani" value="Anillo de Brujas">
+    <input type="button" id="colg" value="Colgante">
+    <input type="button" id="trib" value="El Anillo Tribal"/>   
+    <input type="button" id="human" value="Humanidades gemelas" />
+    <input type="button" id="ning" value="Ninguno">
+  </section>
 
 
-  <h1 id="titulo">PÁGINA DE POO CON DARK SOULS</h1>
+  <h1 id="titulo">CREACION PERSONAJE: DARK SOULS</h1>
 
   <!--<div class="container">Padre "container" sin flex cyan -->
 
@@ -70,39 +95,46 @@
 
       <div class="tabla-estadisticas">
 
-        <span class="span-fondo">Nivel</span>
-        <!-- <input id="inp_nivel" type="text" value="0" readonly /> -->
-
-        <input id="inp_nivel2222" type="text" value="0" readonly />
-
-
+        <div></div>
+        <span class="span-fondo">Nivel</span>        
+        <input id="inp_nivel" type="text" value="0" readonly />
+        
+        <img src="./recursos/stats/vitalidad.png" alt="vitalidad">
         <span class="span-fondo">Vitalidad</span>
         <input id="inp_vitalidad" type="text" value="0" readonly />
-
+                
+        <img src="./recursos/stats/aprendizaje.png" alt="aprendizaje">
         <span class="span-fondo">Aprendizaje</span>
         <input id="inp_aprendizaje" type="text" value="0" readonly />
-
+        
+        <img src="./recursos/stats/aguante.png" alt="aguante">
         <span class="span-fondo">Aguante</span>
-        <input id="inp_aguante" type="text" placeholder="0" readonly />
-
+        <input id="inp_aguante" type="text" value="0" readonly />
+        
+        <img src="./recursos/stats/fuerza.png" alt="fuerza">
         <span class="span-fondo">Fuerza</span>
-        <input id="inp_fuerza" type="text" placeholder="0" readonly />
-
+        <input id="inp_fuerza" type="text" value="0" readonly />
+        
+        <img src="./recursos/stats/destreza.png" alt="destreza">
         <span class="span-fondo">Destreza</span>
-        <input id="inp_destreza" type="text" placeholder="0" readonly />
-
+        <input id="inp_destreza" type="text" value="0" readonly />
+        
+        <img src="./recursos/stats/resistencia.png" alt="resistencia">
         <span class="span-fondo">Resistencia</span>
-        <input id="inp_resistencia" type="text" placeholder="0" readonly />
-
+        <input id="inp_resistencia" type="text" value="0" readonly />
+        
+        <img src="./recursos/stats/inteligencia.png" alt="Inteligencia">
         <span class="span-fondo">Inteligencia</span>
-        <input id="inp_inteligencia" type="text" placeholder="0" readonly />
-
+        <input id="inp_inteligencia" type="text" value="0" readonly />
+        
+        <img src="./recursos/stats/fe.png" alt="fe">
         <span class="span-fondo">Fe</span>
-        <input id="inp_fe" type="text" placeholder="0" readonly />
+        <input id="inp_fe" type="text" value="0" readonly />
 
         <!-- Linea separacion -->
+        <img src="./recursos/stats/humanidad.png" alt="Humanidad">
         <span class="span-fondo">Humanidad</span>
-        <input id="inp_humanidad" type="text" placeholder="0" readonly />
+        <input id="inp_humanidad" type="text" value="0" readonly />
 
       </div>
 
@@ -146,10 +178,9 @@
       </div>
 
       <!-- FOTO DEL PERSONAJE ENMARCADO EN UN RECTANGULO ROJO -->
-      <div class="cuadro-panel">
-        <div class="cuadro">
-          <!--Hijo de "panel_personaje" con flex-->
-          <img src="./assets/hechicero.jpg" alt="hechicero" id="hechicero" />
+
+        <div class="cuadros">
+          <img src="./recursos/logo_DS.jpg" alt="vacio" id="imagen" height="283px" width="426px">
         </div>
       </div>
     </div>

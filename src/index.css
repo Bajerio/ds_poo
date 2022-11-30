@@ -21,30 +21,59 @@ h1#titulo {
   text-align: center;
 }
 
-:root {
+/* :root {
   --transladar-posicion: translate(10px, -20px);
   --pad-elemento: 1rem 1.5rem 2rem 1.1rem;
   --fondo: #eee;
   --radio: 50%;
   --pxs: 30px;
+} */
+:root {
+	--transladar-posicion: translate(10px, -50px);
+	--pad-elemento: -1.5rem 1.5rem 1rem 11.1rem;
+	--fondo: #eee;
+	--radio: 49%;
+	--pxs: 64px;
 }
-
 /**************** ESTILOS INPUTS *********************************/
 
-section.sexo_modal input,
+/* section.sexo_modal input,
 section.clase_modal input {
   border-radius: 25px;
   padding: 20px;
-  width: 100px;
+  width: 120px;
   height: 50px;
   padding-bottom: 35px;
+  font-size:18px;
+  text-align:center; 
+   background-image: linear-gradient(to top,black, white);
+  background-image: linear-gradient(10deg, black, white);
+} */
+section.sexo_modal input:hover,
+section.clase_modal input:hover, section.regalo_modal input:hover {
+  background-image: linear-gradient(200deg, black, white);
+}
+
+/* section.regalo_modal input{
+  border-radius: 25px;
+  font-size:30px;
+  padding: 20px;
+  width: 400px;
+  height: 50px;
+  padding-bottom: 50px;
+
+  background-image: linear-gradient(10deg, black, white);
+} */
+section input{
+  border-radius: 25px;
+  padding: 20px;
+  width: 400px;
+  height: 50px;
+  padding-bottom: 50px;
   /* background-image: linear-gradient(to top,black, white); */
   background-image: linear-gradient(10deg, black, white);
 }
-section.sexo_modal input:hover,
-section.clase_modal input:hover {
-  background-image: linear-gradient(200deg, black, white);
-}
+
 
 input {
   cursor: pointer;
@@ -63,7 +92,7 @@ input {
 
 input[type='button'] {
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-shadow: -1px -1px 3px #999, 0 0 1px darkred, 1px 1px 1px red,
     2px 2px 1px #555, 3px 3px 1px #222, 4px 4px 1px #000;
 }
@@ -89,6 +118,7 @@ div.flex :only-child {
   height: var(--pxs);
   margin-top: var(--pxs);
   margin-right: 15px;
+  text-align:center;
 }
 
 /* div.container{ */
@@ -104,7 +134,7 @@ div.flex :only-child {
   min-height: 250px;
   position: absolute;
   top: 30%;
-  left: 30%;
+  left: 40%;
   background-color: red;
   border: 1px solid #ddd;
   border-radius: 15px;
@@ -124,8 +154,29 @@ div.flex :only-child {
   padding: 1.3rem;
   min-height: 250px;
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 10%;
+  left: 40%;
+  background-color: red;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+
+  /* ESTO LO AÑADIMOS PARA EL OVERLAY POSTERIOR PARA REALIZAR UN EFECTO EN EL QUE
+        EL MODAL ESTA POR ENCIMA DE LA PRINCIPAL */
+  z-index: 2;
+}
+
+.regalo_modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  width: 450px;
+  padding: 1.3rem;
+  min-height: 250px;
+  position: absolute;
+  top: 10%;
+  left: 40%;
   background-color: red;
   border: 1px solid #ddd;
   border-radius: 15px;
@@ -198,13 +249,14 @@ div.panel_personaje {
       display: grid;
       /* 5x2 = 10 Celdas */
       grid-template-rows:repeat(5, 30px);
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 0.1fr);
       align-items: center;
       background: #26292c;
-      padding: 10px 120px 0 10px;
+      padding: 20px 100px 20px 100px;
       border: 4px double red;
       border-radius: 8px;
-      gap:35px;
+      gap:40px;
+      margin:15px;
     
 
       & span.span-fondo {
@@ -220,14 +272,16 @@ div.panel_personaje {
         padding:5px;
         font-size:25px;
     }
+      & img {
+
+        /* border: 7px solid yellow; */
+        background:yellow;
+        padding:5px;
+
+      }
     }
 
     & div.conf_perso {
-      /*
-    No se usa flex ya que lo hereda de panel_personaje pero usamos grid para el formulario
-    display:flex;
-    align-content: center;*/
-
       display: grid;
 
       grid-template-rows: repeat(5, 50px);
@@ -241,8 +295,6 @@ div.panel_personaje {
       margin: 100px;
 
       & input#nombre {
-        /* display:flex;    */
-
         width: 293px;
         height: 45px;
         color: green;
@@ -268,7 +320,7 @@ div.panel_personaje {
         justify-content: flex-start;
         align-items: center;
         margin-left: 170px;
-
+        font-size:1.5em;
         flex-wrap: wrap;
 
         & input {
@@ -282,20 +334,16 @@ div.panel_personaje {
       }
     }
 
-    & div.cuadro-panel {
-      /* display: flex; */
-      /* flex-direction: row; */
 
-      & div.cuadro {
+      & div.cuadros {
         margin: 70px;
-        background: red;
-        border: 5px solid #760dcf;
+        border: 30px solid #760dcf;
 
-        & img#hechicero {
+        & img#img_hombre {
           margin: 60px;
           border: 5px solid #0d5bcf;
         }
       }
-    }
+    
   }
 }
