@@ -5,147 +5,221 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>PERSONAJE DARK SOULS</title>
   
+  <link rel="stylesheet" href="./components/interfaz_paneles.html"> <!-- creo que esta linea no es necesaria -->
   
-  <script type="module" crossorigin src="/ds_poo/index.47c8969e.js"></script>
-  <link rel="stylesheet" href="/ds_poo/index.246ec8f9.css">
+  <script type="module" crossorigin src="/ds_poo/index.f50b63bd.js"></script>
+  <link rel="stylesheet" href="/ds_poo/index.e90764c9.css">
 </head>
 
 <body>
 
-  <h1 id="titulo">PÁGINA DE POO CON DARK SOULS</h1>
+  <section class="sexo_modal hidden">
+    <style type="text/css">
+      textarea {
+        font-size: 30px;
+        resize: none;
+      }
+    </style>
+    <!-- AÑADIR EL MARKUP (Panel del modal) Y EL BOTON X-->
+    <div class="flex">
+      <input type="button" class="salir_sexo" name="salir" value="X" />
+    </div>
+    <input type="button" id="hombre" value="Hombre" />
+    <input type="button" id="mujer" value="Mujer" />
+    <textarea name="descripcion" id="des_sexo" cols="25" rows="5" placeholder="Descripción de elementos"
+      readonly></textarea>
+
+  </section>
+
+  <section class="clase_modal hidden">
+
+    <!-- AÑADIR EL MARKUP (Panel del modal) Y EL BOTON X-->
+    <div class="flex">
+      <input type="button" class="salir_clase" name="salir" value="X" />
+    </div>
+
+    <input type="button" id="gue" value="Guerrero" />
+    <input type="button" id="cab" value="Caballero" />
+    <input type="button" id="vag" value="Vagabundo" />
+    <input type="button" id="lad" value="Ladrón" />
+    <input type="button" id="ban" value="Bandido" />
+    <input type="button" id="caz" value="Cazador" />
+    <input type="button" id="mago" value="Mago" />
+    <input type="button" id="piro" value="Piromante" />
+    <input type="button" id="cle" value="Clérigo" />
+    <input type="button" id="mar" value="Marginado" />
+
+    <textarea name="descripcion" id="des_clase" cols="25" rows="5" placeholder="Descripción de elementos"
+      readonly></textarea>
+
+  </section>
+
+
+  <section class="regalo_modal hidden">
+
+    <!-- AÑADIR EL MARKUP (Panel del modal) Y EL BOTON X-->
+    <div class="flex">
+      <input type="button" class="salir_regalo" name="salir" value="X" />
+    </div>
+
+    <input type="button" id="bomba" value="Bomba I. N." />
+    <input type="button" id="prisma" value="Prismáticos" />
+    <input type="button" id="bendi" value="Bendición Divina" />
+    <input type="button" id="llave" value="Llave Universal" />
+    <input type="button" id="ani" value="Anillo de Bruja">
+    <input type="button" id="colg" value="Colgante">
+    <input type="button" id="dim" value="Anillo de Diminuto" />
+    <input type="button" id="human" value="Humanidades gemelas" />
+    <input type="button" id="ning" value="Ninguno">
+
+    <div class="text-area">
+      <textarea name="descripcion" id="des_regalo" cols="25" rows="5" placeholder="Descripción de elementos"
+        readonly></textarea>
+    </div>
+  </section>
+
+
+  <!-- MODAL RESUMEN ELECCION PERSONAJE -->
+
+  <section class="resumen_personaje_modal hidden">
+    <div class="flex">
+      <input type="button" class="salir_resumen" name="salir" value="X" />
+    </div>
+
+    <h2>ELECCIÓN PERSONAJE:</h2>
+
+    <div class="tabla_resumen">
+      <label id="lab_nombre">Nombre</label>
+      <input id="inp_nom" type="text" value="Nombre" readonly />
+      <label id="sex">Sexo</label>
+      <input id="inp_sex" type="text" value="H/M" readonly />
+      <label id="clase">Clase</label>
+      <input id="inp_cls" type="text" value="Clase" readonly />
+      <label id="regalo">Regalo</label>
+      <input id="inp_reg" type="text" value="Regalo" readonly />
+    </div>
+
+  </section>
+
+
+
+
+
+  <h1 id="titulo">CREACION PERSONAJE: DARK SOULS</h1>
 
   <!--<div class="container">Padre "container" sin flex cyan -->
-    <div class="panel_personaje"><!--Hijo de "container" con flex verde -->
-      
-      <div class="retrato_crear_perso">
 
-            <div class="retrato">
-            <img src="/ds_poo/retrato.cd0b4ae5.PNG" alt="cara" id="cara"/>
-            </div>
-            <div class="franjas">
-              <div class="franja_morada">Crear personaje</div>
-              <div class="franja_roja">Elegir fisico</div>
-            </div>
+  <!-- DIV PADRE -->
+  <div class="panel_personaje">
+    <!--Hijo de "container" con flex verde -->
+
+
+    <!-- TITULO SUPERIOR DONDE APARECE EL RETRATO  -->
+    <div class="retrato_crear_perso">
+
+      <div class="retrato">
+        <img src="/ds_poo/retrato.cd0b4ae5.PNG" alt="cara" id="cara" />
       </div>
-    
+      <div class="franjas">
+        <div class="franja_morada">Crear personaje</div>
+        <div class="franja_roja">Elegir fisico</div>
+      </div>
+    </div>
 
-      <div class="cuadro"><!--Hijo de "panel_personaje" con flex-->
-        <img src="/ds_poo/hechicero.04f6c949.jpg" alt="hechicero" id="hechicero"/>
+
+    <div class="cuerpo_pagina">
+
+      <div class="tabla-estadisticas">
+
+        <div></div>
+        <span class="span-fondo">Nivel</span>
+        <input id="inp_nivel" type="text" value="0" readonly />
+
+        <img src="/ds_poo/vitalidad.bc71886f.png" alt="vitalidad">
+        <span class="span-fondo">Vitalidad</span>
+        <input id="inp_vitalidad" type="text" value="0" readonly />
+
+
+        <img src="/ds_poo/aprendizaje.9750f884.png" alt="aprendizaje">
+        <span class="span-fondo">Aprendizaje</span>
+        <input id="inp_aprendizaje" type="text" value="0" readonly />
+
+        <img src="/ds_poo/aguante.8c16a16a.png" alt="aguante">
+        <span class="span-fondo">Aguante</span>
+        <input id="inp_aguante" type="text" value="0" readonly />
+
+        <img src="/ds_poo/fuerza.7ea3d075.png" alt="fuerza">
+        <span class="span-fondo">Fuerza</span>
+        <input id="inp_fuerza" type="text" value="0" readonly />
+
+        <img src="/ds_poo/destreza.33030d28.png" alt="destreza">
+        <span class="span-fondo">Destreza</span>
+        <input id="inp_destreza" type="text" value="0" readonly />
+
+        <img src="/ds_poo/resistencia.af18b5d2.png" alt="resistencia">
+        <span class="span-fondo">Resistencia</span>
+        <input id="inp_resistencia" type="text" value="0" readonly />
+
+        <img src="/ds_poo/inteligencia.16b2229d.png" alt="Inteligencia">
+        <span class="span-fondo">Inteligencia</span>
+        <input id="inp_inteligencia" type="text" value="0" readonly />
+
+        <img src="/ds_poo/fe.72f4ca3e.png" alt="fe">
+        <span class="span-fondo">Fe</span>
+        <input id="inp_fe" type="text" value="0" readonly />
+
+        <!-- Linea separacion -->
+        <img src="data:image/png;base64,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" alt="Humanidad">
+        <span class="span-fondo">Humanidad</span>
+        <input id="inp_humanidad" type="text" value="0" readonly />
+
       </div>
 
-      <div class="conf_perso"><!--Hijo de "panel_personaje" con flex-->
+      <!-- PANEL EN EL QUE SE CONFIGURA EL PERSONAJE -->
+      <div class="conf_perso">
+        <!--Hijo de "panel_personaje" con flex-->
 
         <!-- onfocus="this.value=''" cuando pincho en el campo se limpia lo escrito -->
-        <input id="nombre" onclick="this.value=''" type="text" name="nombre" placeholder="Introduzca nombre" minlength="3" maxlength="30" required />
+        <input id="nombre" onclick="this.value=''" value="" type="text" name="nombre" placeholder="Introduzca nombre"
+          minlength="3" maxlength="30" required />
         <!-- <textarea maxlength="30" id="textarea" cols="5" rows="5"></textarea> -->
         <div></div>
-<!--       
-        <label id="cara">Cara</label>
-        <select id="cara_perso">
-          <option>Mujer</option>
-          <option>Hombre</option>
-        </select> -->
 
         <label id="cara">Cara</label>
         <input type="button" name="cara" id="cara_perso" value="Seleccionar">
 
-          <!--        
-            <select id="M_H">
-              <option>Mujer</option>
-              <option>Hombre</option>
-            </select> -->
-
-          <!-- Sexo -->
-          <label id="sexo">Sexo</label>
-          <input type="button" name="sexo" id="sexo_perso" value="Seleccionar">
-        
-        <!-- <label id="pelo">Pelo</label>
-        <select id="pelo_perso">
-          <option>Mujer</option>
-          <option>Hombre</option>
-        </select> -->
+        <label id="sexo">Sexo</label>
+        <input type="button" name="sexo" id="sexo_perso" value="Seleccionar">
 
         <label id="pelo">Pelo</label>
         <input type="button" name="pelo" id="pelo_perso" value="Seleccionar">
 
-
-        <!-- <label id="clase">Clase</label>
-        <select id="clase_combate">
-          <option>Guerrero</option>
-          <option>Caballero</option>
-          <option>Vagabundo</option>
-          <option>Ladrón</option>
-          <option>Bandido</option>
-          <option>Cazador</option>
-          <option>Mago</option>
-          <option>Piromante</option>
-          <option>Clérigo</option>
-          <option>Marginado</option>
-        </select> -->
-
         <label id="clase">Clase</label>
-          <input type="button" name="clase" id="clase_perso" value="Seleccionar">
-       
-        <!-- <label id="pelo_ojos">Pelo/Ojos</label>
-        <select id="pelo_ojos_perso">
-          <option>Mujer</option>
-          <option>Hombre</option>
-        </select> -->
+        <input type="button" name="clase" id="clase_perso" value="Seleccionar">
+
 
         <label id="pelo_ojos">Pelo/Ojos</label>
         <input type="button" name="pelo_ojos" id="pelo_ojos_perso" value="Seleccionar">
 
-
-        <!-- <label id="regalo">Regalo</label>
-        <select id="regalo_perso">
-          <option>Ninguno</option>
-          <option>Bendición divina</option>
-          <option>Bomba fuego negra</option>
-          <option>Humanidades Gemelas</option>
-          <option>Prismáticos</option>
-          <option>Colgante</option>
-          <option>Llave maestra</option>
-          <option>Anillo de diminuto</option>
-          <option>Anillo de bruja</option>
-        </select> -->
-
         <label id="regalo">Regalo</label>
-          <input type="button" name="regalo" id="regalo_perso" value="Seleccionar">
-
-        <div></div>
-        <div></div>
-<!-- 
-        <label id="fisico">Físico</label>
-        <select id="fisico_perso">
-          <option>Normal</option>
-          <option>Delgado</option>
-          <option>Grande</option>
-        </select> -->
+        <input type="button" name="regalo" id="regalo_perso" value="Seleccionar">
 
         <label id="fisico">Fisico</label>
         <input type="button" name="fisico" id="fisico_perso" value="Seleccionar">
 
-
-
-        <!-- Botones de seleccion -->
-
-        
-
-
-        <!-- Botones confirmativos -->
-
-        <!-- <a href="./components/resumen_personaje.html"><input type="button" class="btn_aceptar" id="aceptar" value="Aceptar"></a> -->
+        <div></div>
         <input type="button" name="aceptar" id="aceptar" value="Aceptar">
         <input type="button" name="personalizar" id="personalizar" value="Personalizar">
+        <div></div>
+        <!-- FOTO DEL PERSONAJE ENMARCADO EN UN RECTANGULO ROJO -->
+      </div>
 
-
-       
-
-
-      </div>    
-  </div>
+      <div class="cuadros">
+        <img src="data:image/jpeg;base64,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" alt="vacio" id="imagen" height="283px" width="426px">
+      </div>
+    </div>
   </div>
 </body>
 
