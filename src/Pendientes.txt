@@ -1,7 +1,7 @@
-+ Ordenar el panel: 
-    - Situando un cuadrado de estadistica debajo del retrato, con el nombre
-    de cada estadistica iniciado a 0.
-    - Esta estadistica variará segun vayamos configurando al personaje (Sexo, Clase, Regalo).
++ Regalos:
+  - Como influye en la estadistica los distintos regalos.
+
+
 
 + Terminar todas las funciones de eleccion del panel personaje:
     - Al poner el raton sobre un input del modal, deberia salir una descripcion de la
@@ -23,7 +23,16 @@ los valores no seleccionados tendrian que poner un valor aleatorio.
       pueda añadir esos 3 puntos adicionales a las estadisticas.
     - Se le podria añadir interfaces de desplazamiento sobre estadistica o aspecto de personaje.
 
-+ Input Clase:
++ Input Clase: -> CAMBIO DE IMAGEN REALIZADO, FALTA TERMINARLO
 
     - Segun vayamos dando a los inputs de la Clase, la imagen del personaje cambia respecto a la 
       Clase seleccionada que configuremos.
+
+
+
+REALIZADOS
+
++ Ordenar el panel:
+    - Situando un cuadrado de estadistica debajo del retrato, con el nombre
+    de cada estadistica iniciado a 0.
+    - Esta estadistica variará segun vayamos configurando al personaje (Sexo, Clase, Regalo).

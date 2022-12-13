@@ -14,12 +14,11 @@
 <body>
 
   <section class="sexo_modal hidden">
-    <style type="text/css"> 
-      textarea{
-        font-size:30px;
+    <style type="text/css">
+      textarea {
+        font-size: 30px;
         resize: none;
-      } 
-      
+      }
     </style>
     <!-- AÑADIR EL MARKUP (Panel del modal) Y EL BOTON X-->
     <div class="flex">
@@ -27,7 +26,8 @@
     </div>
     <input type="button" id="hombre" value="Hombre" />
     <input type="button" id="mujer" value="Mujer" />
-    <textarea name="descripcion" id="des_sexo" cols="25" rows="5" placeholder="Descripción de elementos" readonly></textarea>
+    <textarea name="descripcion" id="des_sexo" cols="25" rows="5" placeholder="Descripción de elementos"
+      readonly></textarea>
 
   </section>
 
@@ -35,8 +35,9 @@
 
     <!-- AÑADIR EL MARKUP (Panel del modal) Y EL BOTON X-->
     <div class="flex">
-      <input type="button" class="salir_clase" name="salir"  value="X" />
+      <input type="button" class="salir_clase" name="salir" value="X" />
     </div>
+
     <input type="button" id="gue" value="Guerrero" />
     <input type="button" id="cab" value="Caballero" />
     <input type="button" id="vag" value="Vagabundo" />
@@ -48,8 +49,11 @@
     <input type="button" id="cle" value="Clérigo" />
     <input type="button" id="mar" value="Marginado" />
 
+    <textarea name="descripcion" id="des_clase" cols="25" rows="5" placeholder="Descripción de elementos"
+      readonly></textarea>
+
   </section>
-  
+
 
   <section class="regalo_modal hidden">
 
@@ -57,16 +61,48 @@
     <div class="flex">
       <input type="button" class="salir_regalo" name="salir" value="X" />
     </div>
-    <input type="button" id="bomba" value="Bomba I. N."/>
+
+    <input type="button" id="bomba" value="Bomba I. N." />
     <input type="button" id="prisma" value="Prismáticos" />
     <input type="button" id="bendi" value="Bendición Divina" />
-    <input type="button" id="llave" value="Llave Universal"/>
-    <input type="button" id="ani" value="Anillo de Brujas">
+    <input type="button" id="llave" value="Llave Universal" />
+    <input type="button" id="ani" value="Anillo de Bruja">
     <input type="button" id="colg" value="Colgante">
-    <input type="button" id="trib" value="El Anillo Tribal"/>   
+    <input type="button" id="dim" value="Anillo de Diminuto" />
     <input type="button" id="human" value="Humanidades gemelas" />
     <input type="button" id="ning" value="Ninguno">
+
+    <div class="text-area">
+      <textarea name="descripcion" id="des_regalo" cols="25" rows="5" placeholder="Descripción de elementos"
+        readonly></textarea>
+    </div>
   </section>
+
+
+  <!-- MODAL RESUMEN ELECCION PERSONAJE -->
+
+  <section class="resumen_personaje_modal hidden">
+    <div class="flex">
+      <input type="button" class="salir_resumen" name="salir" value="X" />
+    </div>
+
+    <h2>ELECCIÓN PERSONAJE:</h2>
+
+    <div class="tabla_resumen">
+      <label id="lab_nombre">Nombre</label>
+      <input id="inp_nom" type="text" value="Nombre" readonly />
+      <label id="sex">Sexo</label>
+      <input id="inp_sex" type="text" value="H/M" readonly />
+      <label id="clase">Clase</label>
+      <input id="inp_cls" type="text" value="Clase" readonly />
+      <label id="regalo">Regalo</label>
+      <input id="inp_reg" type="text" value="Regalo" readonly />
+    </div>
+
+  </section>
+
+
+
 
 
   <h1 id="titulo">CREACION PERSONAJE: DARK SOULS</h1>
@@ -96,37 +132,38 @@
       <div class="tabla-estadisticas">
 
         <div></div>
-        <span class="span-fondo">Nivel</span>        
+        <span class="span-fondo">Nivel</span>
         <input id="inp_nivel" type="text" value="0" readonly />
-        
+
         <img src="./recursos/stats/vitalidad.png" alt="vitalidad">
         <span class="span-fondo">Vitalidad</span>
         <input id="inp_vitalidad" type="text" value="0" readonly />
-                
+
+
         <img src="./recursos/stats/aprendizaje.png" alt="aprendizaje">
         <span class="span-fondo">Aprendizaje</span>
         <input id="inp_aprendizaje" type="text" value="0" readonly />
-        
+
         <img src="./recursos/stats/aguante.png" alt="aguante">
         <span class="span-fondo">Aguante</span>
         <input id="inp_aguante" type="text" value="0" readonly />
-        
+
         <img src="./recursos/stats/fuerza.png" alt="fuerza">
         <span class="span-fondo">Fuerza</span>
         <input id="inp_fuerza" type="text" value="0" readonly />
-        
+
         <img src="./recursos/stats/destreza.png" alt="destreza">
         <span class="span-fondo">Destreza</span>
         <input id="inp_destreza" type="text" value="0" readonly />
-        
+
         <img src="./recursos/stats/resistencia.png" alt="resistencia">
         <span class="span-fondo">Resistencia</span>
         <input id="inp_resistencia" type="text" value="0" readonly />
-        
+
         <img src="./recursos/stats/inteligencia.png" alt="Inteligencia">
         <span class="span-fondo">Inteligencia</span>
         <input id="inp_inteligencia" type="text" value="0" readonly />
-        
+
         <img src="./recursos/stats/fe.png" alt="fe">
         <span class="span-fondo">Fe</span>
         <input id="inp_fe" type="text" value="0" readonly />
@@ -143,7 +180,7 @@
         <!--Hijo de "panel_personaje" con flex-->
 
         <!-- onfocus="this.value=''" cuando pincho en el campo se limpia lo escrito -->
-        <input id="nombre" onclick="this.value=''" type="text" name="nombre" placeholder="Introduzca nombre"
+        <input id="nombre" onclick="this.value=''" value="" type="text" name="nombre" placeholder="Introduzca nombre"
           minlength="3" maxlength="30" required />
         <!-- <textarea maxlength="30" id="textarea" cols="5" rows="5"></textarea> -->
         <div></div>
@@ -167,21 +204,18 @@
         <label id="regalo">Regalo</label>
         <input type="button" name="regalo" id="regalo_perso" value="Seleccionar">
 
-
-
         <label id="fisico">Fisico</label>
         <input type="button" name="fisico" id="fisico_perso" value="Seleccionar">
-        <div class="acep-perso">
-          <input type="button" name="aceptar" id="aceptar" value="Aceptar">
-          <input type="button" name="personalizar" id="personalizar" value="Personalizar">
-        </div>
+
+        <div></div>
+        <input type="button" name="aceptar" id="aceptar" value="Aceptar">
+        <input type="button" name="personalizar" id="personalizar" value="Personalizar">
+        <div></div>
+        <!-- FOTO DEL PERSONAJE ENMARCADO EN UN RECTANGULO ROJO -->
       </div>
 
-      <!-- FOTO DEL PERSONAJE ENMARCADO EN UN RECTANGULO ROJO -->
-
-        <div class="cuadros">
-          <img src="./recursos/logo_DS.jpg" alt="vacio" id="imagen" height="283px" width="426px">
-        </div>
+      <div class="cuadros">
+        <img src="./recursos/logo_DS.jpg" alt="vacio" id="imagen" height="283px" width="426px">
       </div>
     </div>
   </div>
